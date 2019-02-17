@@ -31,3 +31,9 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+### Development
+
+```bash
+npm run dev
+```
