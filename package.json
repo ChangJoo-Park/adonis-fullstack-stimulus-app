@@ -1,20 +1,23 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "adonis-fullstack-stimulus-app",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "The fullstack application boilerplate for Adonisjs with Stimulus",
   "main": "index.js",
   "scripts": {
+    "dev": "npm-run-all --parallel watch:js build",
+    "watch:js": "nodemon --watch app --watch bootstrap --watch config --watch .env --exec npm start",
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "build": "./node_modules/.bin/webpack --mode development --progress --hide-modules --watch"
   },
   "keywords": [
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
-  "license": "UNLICENSED",
-  "private": true,
+  "author": "ChangJoo Park<pcjpcj2@gmail.com",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@adonisjs/ace": "^5.0.8",
     "@adonisjs/auth": "^3.0.7",
@@ -25,9 +28,25 @@
     "@adonisjs/ignitor": "^2.0.8",
     "@adonisjs/lucid": "^6.1.3",
     "@adonisjs/session": "^1.0.27",
-    "@adonisjs/shield": "^1.0.8"
+    "@adonisjs/shield": "^1.0.8",
+    "stimulus": "^1.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-transform-block-scoping": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  },
   "autoload": {
     "App": "./app"
   }
