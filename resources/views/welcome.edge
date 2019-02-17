@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello Adonis</title>
-  {{ style('app') }}
-  {{ script('app') }}
-</head>
-<body>
-  <section>
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="subtitle">
-      <p>AdonisJs simplicity will make you feel confident about your code</p>
-      <p>
-        Don't know where to start? Read the <a href="https://adonisjs.com/docs">documentation</a>.
-      </p>
-    </div>
-    <div class="stimulus" data-controller="hello">
-      <input data-target="hello.name" type="text" value="stimulus">
-      <button data-action="click->hello#greet">
-        Greet
-      </button>
-      <p class="stimulus-output" data-target="hello.output" />
-    </div>
-  </section>
-</body>
-</html>
+@layout('application')
+@section('body')
+  <div class="logo"></div>
+  <div class="title"></div>
+  <div class="subtitle">
+    <p>AdonisJs simplicity will make you feel confident about your code</p>
+    <p>
+      Don't know where to start? Read the <a href="https://adonisjs.com/docs">documentation</a>.
+    </p>
+  </div>
+  <div class="stimulus" data-controller="hello">
+    <input data-target="hello.name" type="text" value="stimulus">
+    <button data-action="click->hello#greet">
+      Greet
+    </button>
+    <p class="stimulus-output" data-target="hello.output" />
+  </div>
+  <div class="turbolinks">
+    <a href="/about">Navigate About page with Turbolinks</a>
+  </div>
+@endsection

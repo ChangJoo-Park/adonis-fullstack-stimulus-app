@@ -38,7 +38,7 @@ section:before {
   background-size: 100%;
   margin-bottom: 35px;
   opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 1.4s forwards; }
+  animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 1.8s forwards; }
 
 .title {
   background: url("/title.svg") no-repeat;
@@ -66,6 +66,12 @@ section:before {
   .stimulus .stimulus-output {
     color: #fafafa;
     font-weight: bold; }
+
+.turbolinks {
+  opacity: 0;
+  margin-top: 25px;
+  animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 1.2s forwards;
+  color: #BDB3CB; }
 
 a {
   color: inherit;

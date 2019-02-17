@@ -1,4 +1,6 @@
-// src/application.js
+import Turbolinks from "turbolinks"
+Turbolinks.start()
+
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 
