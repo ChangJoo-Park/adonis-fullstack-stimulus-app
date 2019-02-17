@@ -11,6 +11,8 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 7. Lucid ORM
 8. Migrations and seeds
 9. Stimulus
+10. Turbolinks
+11. Test
 
 ## Setup
 
@@ -36,4 +38,10 @@ adonis migration:run
 
 ```bash
 npm run dev
+```
+
+### Test
+
+```bash
+adonis test
 ```
